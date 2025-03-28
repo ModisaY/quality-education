@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile</title>
+    <link rel="stylesheet" href="style-profile.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+  </head>
+
+  <body onload="register()">
+    <header>
+      <!-- Navigation Bar starts here -->
+      <nav>
+        <!-- These checkbox used to get menu icon when navigation bar responsive -->
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">=</label>
+        <label for="check" class="checkbtn2">x</label>
+        <!-- Logo and name of site -->
+        <img src="images/EDU-1.png" alt="logo" />
+        <label class="logo-name">| Quality Education</label>
+
+        <ul>
+          <li><a href="../student2/home.html">HOME</a></li>
+          <li><a href="../student1/shop.html">SHOP</a></li>
+          <li><a href="../student4/gallery (2)/gallery/gallery.html">GALLERY</a></li>
+          <li><a href="../student4/Sitemap2/SiteMap/sitemap.html">SITEMAP</a></li>
+          <li><a href="../student2/feedback.html">FEEDBACK</a></li>
+          <li><a class="active" href="#">PROFILE</a></li>
+          <li><a href="../student3/team.html">TEAM</a></li>
+        </ul>
+      </nav>
+      <!-- End of nav bar -->
+    </header>
+    <div class="action-button">
+      
+      <button class="btn white-btn" id="loginBtn" onclick="login()">
+        Sign In
+      </button>
+      <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+    </div>
+
+    <div class="wrapper" id="wrapper">
+      
+      <div class="form-box">
+        <div class="progress-container" id="progress">
+          <div class="progreeDiv">
+            <div class="progressBar" id="progressBar"></div>
+          </div><br>
+          <label for="progress" id="progress-title">Profile Completion Progress</label>
+        </div>
+        <div class="register-container" id="register">
+          <div class="already-got">
+            <span>Have an account? <a href="#" onclick="login()">Login</a></span>
+          </div>
+
+          <div class="top">
+            <header>Sign Up</header>
+            <p>Personal Details:</p>
+          </div>
+            <div class="input-box">
+              <input type="text" class="input-field" placeholder="Firstname" id="fname" />
+              <i class="bx bx-user"></i>
+            </div>
+            <div class="input-box">
+              <input type="text" class="input-field" placeholder="Lastname" id="lname"/>
+              <i class="bx bx-user"></i>
+            </div>
+
+            <div class="input-box">
+              <input type="email" class="input-field" placeholder="Email" id="email"/>
+              <i class="bx bx-envelope"></i>
+            </div>
+
+            <div class="input-box">
+              <input type="tel" class="input-field" placeholder="Mobile Number" id="mobile"/>
+              <i class="bx bx-mobile"></i>
+            </div>
+
+            <div class="input-box">
+              <div class="dob-wrapper">
+                <p>Date of Birth</p>
+                <input type="date" class="input-field" id="dob"/>
+              </div>
+            </div>
+
+            <div class="two-form-gender">
+              <p>Gender</p>
+              <div class="input-box">
+                <div class="gender-wrapper">
+                  <div class="gender-container gap">
+                    <input type="radio" class="input-field" id="genderMale" name="gender" value="male" />
+                    <label for="male">Male</label>
+                    <input type="radio" class="input-field" id="genderFemale" name="gender" value="female" />
+                    <label for="female">Female</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-box">
+              <input type="text" class="input-field" id="username" placeholder="Username" />
+              <i class="bx bx-user-circle"></i>
+            </div>
+
+            <div class="two-form-password">
+              <div class="input-box">
+                <input type="password" class="input-field" id="password" placeholder="Password" size="8"/>
+                <i class="bx bx-lock-alt"></i>
+              </div>
+              <div class="input-box">
+                <input type="password" class="input-field" id="cpassword" placeholder="Re-enter password" size="8"/>
+                <i class="bx bx-lock-alt"></i>
+              </div>
+            </div>
+
+            <div class="input-box gap">
+              <input type="submit" class="submit next-btn" value="Next" onclick="validateRegister()"/>
+              <input type="reset" class="submit" value="Clear" onclick="clearRegisterContainer()"/>
+            </div>
+
+        </div>
+
+        <div class="edu-container hidden" id="education">
+
+          <div class="top">
+            <p>Educatinal Details:</p>
+          </div>
+
+          <div class="input-box">
+            <p class="eduPara">What is your highest level of education?</p>
+            <label for="education"></label><br />
+
+            <select name="education" class="input-field" id="educationSub">
+              <option value="">Select a option</option>
+              <option value="o/l">O/L</option>
+              <option value="a/l">A/L</option>
+              <option value="dip">Diploma</option>
+              <option value="degree">Degree</option>
+              <option value="other">Other</option>
+            </select>
+
+            <p class= "otherEduPara">If other please specify</p>
+            <input type="text" id="otherEducation" class="input-field" placeholder="Please Specify"/>
+          </div>
+          <div class="two-form-education">
+            <div class="input-box edu-sec-one">
+              <p class="enrollPara"> Are you currently enrolled in any educational institution? If yes please specify</p>
+              <div class="first-enrollment">
+                <input type="radio" id="enrollment-checkYes" name="enrollment-check"/>
+                <label for="yes">Yes</label>
+                <input type="radio" id="enrollment-checkNo" name="enrollment-check" />
+                <label for="no">No</label>
+              </div>
+              <div class="second enrollDesc">
+                <input type="text" id="enrollment-description" class="input-field" placeholder="Please Specify" />
+              </div>
+            </div>
+          </div>
+          <div  class="input-box action-btns" >
+            <input  type="button" class="submit previous-btn" value="Previous" onclick="registerView()"/>
+            <input  type="button" class="submit next-btn" value="Next" onclick="validateEducation()"/>
+            <input  type="reset" class="submit" value="Clear" onclick="clearEduContainer()" />
+          </div>
+        </div>
+
+        <div class="course-container hidden" id="course">
+          <div class="top">
+            <p>Course Preference:</p>
+          </div>
+          <div class="input-box edu-sec-one">
+            <p>What subjects are you interested in learning more about?</p><br>
+            <div class="subjects">
+              <input type="checkbox" id="maths" value="maths" />
+              <label for="maths">Maths </label> &nbsp;
+              <input type="checkbox" id="science" value="science" />
+              <label for="science">Science</label><br>
+              <input type="checkbox" id="english" value="english" />
+              <label for="english">English</label>
+              <input type="checkbox" id="it" value="it" />
+              <label for="it">Information Technology</label>
+            </div>
+
+            <br><p>Would you prefer</p><br>
+
+            <div class="course-pref">
+              <input type="checkbox" id="live" value="live" />
+              <label for="live">Live instructor led-courses</label> </br>
+              <input type="checkbox" id="self" value="self" />
+              <label for="self">Self-paced courses</label>
+            </div>
+          </div>
+          <div class="input-box buttonCat">
+            <input  type="submit" class="submit previous-btn" value="Previous" onclick="education()"/>
+            <input type="submit" class="submit next-btn" value="Next" onclick="validateCourse()"/>
+            <input type="reset"  onclick="clearCourseContainer()" class="submit" value="Clear" />
+          </div>
+        </div>
+
+        <div class="career-container hidden" id="career">
+          <div class="top">
+            <p>Career Information & Learning Goals:</p>
+          </div>
+
+          <div class="input-box edu-sec-one">
+            <p>What is your current job role?</p><br>
+            <input type="text" id="Occupation" class="input-field" placeholder="Occupation" />
+          </div>
+
+          <div class="input-box edu-sec-one">
+            <br><p>Do you have any specific career goals or aspirations?</p><br>
+            <textarea id="goals" cols="50" rows="5" placeholder="Write here......" ></textarea>
+          </div>
+
+          <div class="edu-sec-one">
+            <div class="one">
+              <br><input type="checkbox" id="register-check" />
+              <label for="register-check">Agree with terms & conditions</label>
+            </div>
+            <div class="two">
+              <br><label><a href="#">Terms & Conditions</a></label>
+            </div>
+          </div>
+
+          <div class="input-box buttonCat">
+            <input  type="submit" class="submit previous-btn" value="Previous" onclick="course()" />
+            <input type="submit" class="submit next-btn" value="Next" onclick="validateCareer()"/>
+            <input type="reset"  onclick="clearCareerInfo()" class="submit" value="Clear" />
+          </div>
+        </div>
+
+        <div class="success-container hidden" id="success" >
+          <div id="output-preview-wrapper">
+            <div id="output-preview">
+              <div class="input-box">
+                <br><h4>Register Form</h4><br>
+              </div>
+
+              <div class="input-box">
+                <input type="text" class="input-field" placeholder="Firstname" id="preview-firstname" readonly/>
+                <i class="bx bx-user"></i>
+              </div>
+
+              <div class="input-box">
+                <input type="text" class="input-field" placeholder="Lastname" id="preview-lastname" readonly/>
+                <i class="bx bx-user"></i>
+              </div>
+  
+              <div class="input-box">
+                <input type="email" class="input-field" placeholder="Email" id="preview-email" readonly/>
+                <i class="bx bx-envelope"></i>
+              </div>
+  
+              <div class="input-box">
+                <input type="tel" class="input-field" placeholder="Mobile Number" id="preview-mobileno" readonly/>
+                <i class="bx bx-mobile"></i>
+              </div>
+  
+              <div class="input-box">
+                <div class="dob-wrapper">
+                  <p>Date of Birth</p>
+                  <input type="date" class="input-field" id="preview-dob" readonly/>
+                </div>
+              </div>
+  
+              <div class="two-form-gender">
+                <p>Gender</p>
+                <div class="input-box">
+                  <div class="gender-wrapper">
+                    <div class="gender-container gap">
+                      <input type="radio" class="input-field" id="preview-genderMale" name="gender" value="male" />
+                      <label for="male">Male</label>
+                      <input type="radio" class="input-field" id="preview-genderFemale" name="gender" value="female" />
+                      <label for="female">Female</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="input-box">
+                <input type="text" class="input-field" id="preview-username" placeholder="Username" readonly/>
+                <i class="bx bx-user-circle"></i>
+              </div>
+
+              <div class="input-box">
+                <select name="education" class="input-field" id="preview-hiest-level-edu" readonly>
+                  <br><option value="">Select a option</option>
+                  <option value="o/l">O/L</option>
+                  <option value="a/l">A/L</option>
+                  <option value="dip">Diploma</option>
+                  <option value="degree">Degree</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <p class="subjectPara">If other please specify</p>
+              <div class="input-box">
+                <input type="text" id="preview-other" class="input-field" placeholder="Please Specify" readonly/>
+              </div>
+
+              <div class="two-form-education ">
+                <div class="input-box edu-sec-one">
+                  <p class="enrollPara">
+                    Are you currently enrolled in any educational institution? If yes please specify
+                  </p><br>
+                  <div class="first educationPara" >
+                    <input type="checkbox" id="preview-currently-enrolledyes" readonly/>
+                    <label for="yes">Yes</label>
+                    <input type="checkbox" id="preview-currently-enrolledno" readonly/>
+                    <label for="no">No</label>
+                  </div>
+                  <div class="second enrollDesc">
+                    <input type="text" id="preview-yes" class="input-field" placeholder="Please Specify" readonly/>
+                  </div>
+                </div>
+              </div>
+
+              <div class="input-box edu-sec-one">
+                <br><p>What subjects are you interested in learning more about?</p><br>
+                <div class="subjects">
+                  <input type="checkbox" id="preview-subjectsMaths" value="maths" readonly/>
+                  <label for="maths">Maths</label> &nbsp;
+                  <input type="checkbox" id="preview-subjectsScience" value="science" readonly/>
+                  <label for="science">Science</label> </br>
+                  <input type="checkbox" id="preview-subjectsEnglish" value="english" readonly/>
+                  <label for="english">English</label>
+                  <input type="checkbox" id="preview-subjectsIt" value="it" readonly/>
+                  <label for="it">Information Technology</label> 
+                  
+                </div>
+    
+                <br><p>Would you prefer</p><br>
+    
+                <div class="course-pref">
+                  <input type="checkbox" id="preview-prefer-methodLive" value="live" readonly/>
+                  <label for="live">Live instructor led-courses</label> </br>
+                  <input type="checkbox" id="preview-prefer-methodSelf" value="self" readonly/>
+                  <label for="self">Self-paced courses</label>
+                </div>
+              </div>
+
+              <div class="input-box edu-sec-one">
+                <br><p>What is your current job role?</p>
+                <input type="text" id="preview-career" class="input-field" placeholder="Occupation" readonly/>
+              </div>
+    
+              <div class="input-box edu-sec-one">
+                <br><p>Do you have any specific career goals or aspirations</p><br>
+                <textarea id="preview-goals" cols="50" rows="5" placeholder="Write here......" ></textarea>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="input-box buttonCat">
+            <input  type="submit" class="submit previous-btn" value="Previous" onclick="career()"/>
+            <input type="submit" class="submit" value="Register"  onclick="saveData()"/>
+          </div>
+        </div>
+
+        <div class="login-container hidden" id="login">
+          <div class="top">
+            <span>Don't have an account? <a href="" onclick="register()">Sign Up</a></span>
+            <header>Login</header>
+          </div>
+          <div class="two-forms">
+            <div class="input-box">
+              <input type="text" class="input-field" id="loginUserName" placeholder="Username" />
+              <i class="bx bx-envelope"></i>
+            </div>
+            <div class="input-box">
+              <input type="password" class="input-field" id="loginPassword" placeholder="Password" />
+              <i class="bx bx-lock-alt"></i>
+            </div>
+          </div>
+
+          <div class="two-col">
+            <div class="one">
+              <input type="checkbox" id="login-check" />
+              <label for="login-check">Remember Me</label>
+            </div>
+            <div class="two">
+              <label><a href="#">Forgot Password?</a></label>
+            </div>
+          </div>
+          <div class="input-box">
+            <input type="submit" class="submit" value="Sign In" onclick="authentication()" />
+          </div>
+          
+        </div>
+      </div>
+    
+    
+    </div>
+
+    <footer>
+      <a href="editor.html" target="_blank">
+        <div class="page-editor">
+          <h2>Page Editor</h2>
+          <div>
+            <p>Name: Lawanya Malavige</p>
+            <p>Role: Student 3</p>
+            <p class="link">Click here</p>
+          </div>
+        </div>
+      </a>
+    </footer>
+    
+    <script src="validation.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
