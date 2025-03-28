@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback</title>
+    <link rel="stylesheet" href="feedback.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Navigation bar Start from here -->
+      <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">=</label>
+        <label for="check" class="checkbtn2">x</label>
+        <img src="logo/EDU-1.png" alt="logo" />
+        <label class="logo-name">| Quality Education</label>
+
+        <ul>
+          <li><a href="../student2/home.html">HOME</a></li>
+          <li><a href="../student1/shop.html">SHOP</a></li>
+          <li>
+            <a href="../student4/gallery (2)/gallery/gallery.html">GALLERY</a>
+          </li>
+          <li><a href="../student4/Sitemap2/SiteMap/sitemap.html">SITEMAP</a></li>
+          <li><a class="active" href="feedback.html">FEEDBACK</a></li>
+          <li><a href="../student3/profile.html">PROFILE</a></li>
+          <li><a href="../student3/team.html">TEAM</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- This part used to get the preview of form. -->
+    <div id="feedback-preview-wrapper">
+      <div id="feedback-preview">
+        <h3 class="preview">Feedback Preview</h3>
+        <h3 id="preview-name">Name:</h3>
+        <h3 id="preview-email">Email:</h3>
+        <h3 id="preview-visiting">First time Visiting:</h3>
+        <h3 id="preview-info">Informative & easy to navigate :</h3>
+        <h3 id="preview-suggest">If "No", Suggestion:</h3>
+        <h3 id="preview-satisfy">Satisfaction Level: -</h3>
+        <h3 id="preview-recommend">Recommendation:</h3>
+        <h3 id="preview-questions">Addtional Questions:</h3>
+        <button class="edit" id="edit">EDIT</button>
+        <button class="submit" id="submit">SUBMIT</button>
+      </div>
+    </div>
+    <div class="top-margin"></div>
+    <!-- Form starts from here. -->
+    <h1 class="title">Feedback Form</h1>
+
+    <form action="#" method="post">
+      <div class="name-box">
+        <h4 class="sub-title">Required fields *</h4>
+
+        <label for="name" id="name-lable">*Name: </label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          spellcheck="false"
+          placeholder="Enter name here"
+          required
+        />
+        <h3 class="error" id="name-error">error</h3>
+        <br />
+        <div class="space"></div>
+
+        <label for="email" id="email-lable">*Email: </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter email here"
+          spellcheck="false"
+          required
+        />
+        <h3 class="error" id="email-error">error</h3>
+        <br />
+        <div class="space"></div>
+
+        <div class="first-time-visiting">
+          <label>Was this your first time visiting?</label>
+          <br />
+          <label
+            ><input
+              type="radio"
+              name="visting"
+              id="visiting-yes"
+              value="yes"
+              required
+            />Yes</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="visting"
+              id="visiting-no"
+              value="no"
+            />No</label
+          >
+          <br />
+        </div>
+        <div class="space"></div>
+        <label
+          >Was this website informative and easy to navigate through?</label
+        >
+        <br />
+        <label
+          ><input
+            type="radio"
+            name="suggest"
+            id="informative-yes"
+            value="yes"
+            required
+          />Yes</label
+        >
+        <label
+          ><input
+            type="radio"
+            name="suggest"
+            id="informative-no"
+            value="no"
+          />No</label
+        >
+        <br />
+        <div class="space"></div>
+
+        <label>*If "No", suggest any improvements for the future: </label>
+        <br />
+        <textarea
+          name="suggestion"
+          id="suggestion"
+          cols="20"
+          rows="5"
+          placeholder="Write here..."
+        ></textarea>
+        <br />
+        <div class="space"></div>
+        <label
+          >How satisfied are you with our services? Choose from 0 to 10, with 1
+          being "Not satisfied at all!" and 10 being "Extremely
+          satisfied!"</label
+        >
+        <!-- Satisfaction part. Used grid layout -->
+        <div class="satisfy">
+          <div class="number">1</div>
+          <div class="number">2</div>
+          <div class="number">3</div>
+          <div class="number">4</div>
+          <div class="number">5</div>
+          <div class="number">6</div>
+          <div class="number">7</div>
+          <div class="number">8</div>
+          <div class="number">9</div>
+          <div class="number">10</div>
+          <div class="radiobtn">
+            <input type="radio" name="rating" value="1" />
+          </div>
+          <div class="radiobtn">
+            <input type="radio" name="rating" value="2" />
+          </div>
+          <div class="radiobtn">
+            <input type="radio" name="rating" value="3" />
+          </div>
+          <div class="radiobtn">
+            <input type="radio" name="rating" value="4" />
+          </div>
+          <div class="radiobtn">
+            <input type="radio" name="rating" value="5" />
+          </div>
+          <div class="radiobtn">
+            <input type="radio" name="rating" value="6" />
+          </div>
+          <div class="radiobtn">
+            <input type="radio" name="rating" value="7" />
+          </div>
+          <div class="radiobtn">
+            <input type="radio" name="rating" value="8" />
+          </div>
+          <div class="radiobtn">
+            <input type="radio" name="rating" value="9" />
+          </div>
+          <div class="radiobtn">
+            <input type="radio" name="rating" value="10" />
+          </div>
+        </div>
+        <div class="space"></div>
+
+        <label>Would you recommend our services?</label>
+        <br />
+        <label
+          ><input
+            type="radio"
+            name="recommend"
+            id="recommend-yes"
+            value="yes"
+            required
+          />Yes</label
+        >
+        <label
+          ><input
+            type="radio"
+            name="recommend"
+            id="recommend-no"
+            value="no"
+          />No</label
+        >
+        <br />
+        <div class="space"></div>
+
+        <label>Do you have any additional questions or requests?</label>
+        <br />
+        <textarea
+          name="questions"
+          id="questions"
+          cols="20"
+          rows="5"
+          placeholder="Write here..."
+        ></textarea>
+        <br />
+        <div class="space"></div>
+        <input type="reset" name="clear-btn" id="clear-btn" value="CLEAR" />
+        <input type="submit" name="submit-btn" id="submit-btn" value="NEXT" />
+      </div>
+    </form>
+
+    <!-- Final massage pop-up to user. -->
+    <div id="succes-wrap">
+      <h1>Sucessfully send the Feedback!</h1>
+      <h2>Thank you!</h2>
+      <button id="msg-close-btn">close</button>
+    </div>
+
+    <footer>
+      <a href="pageEditor/pageEditor.html">
+        <div class="page-editor">
+          <h2>Page Editor</h2>
+          <div>
+            <p>Name: Gaindu Amarasinghe</p>
+            <p>Role: Student 2</p>
+            <p class="link">Click here</p>
+          </div>
+        </div>
+      </a>
+    </footer>
+
+    <script src="feedback.js"></script>
+  </body>
+</html>
