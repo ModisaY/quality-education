@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/shop.css" />
+    <title>Shop</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">=</label>
+        <label for="check" class="checkbtn2">x</label>
+        <img src="logo/logo/EDU-1.png" alt="logo" />
+        <label class="logo-name">| Quality Education</label>
+
+        <ul>
+          <li><a href="../student2/home.html">HOME</a></li>
+          <li><a class="active" href="#">SHOP</a></li>
+          <li>
+            <a href="../student4/gallery (2)/gallery/gallery.html">GALLERY</a>
+          </li>
+          <li>
+            <a href="../student4/Sitemap2/SiteMap/sitemap.html">SITEMAP</a>
+          </li>
+          <li><a href="../student2/feedback.html">FEEDBACK</a></li>
+          <li><a href="../student3/profile.html">PROFILE</a></li>
+          <li><a href="../student3/team.html">TEAM</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="container">
+      <div id="heading">
+        <h1>Shop</h1>
+        <div id="cart-icon">
+          <svg
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="43"
+            height="43"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"
+            />
+          </svg>
+          <span>0</span>
+        </div>
+      </div>
+
+      <div id="shop-items-wrapper">
+        <div id="shop-items">
+          <div class="item-type">
+            <div id="shop-product-items">
+              <!-- <div class="shop-item" data-id="3">
+                <img src="images/image4.png" alt="img" class="item-img">
+                <h1 class="item-name">Notebook</h1>
+                <h2 class="item-price">$300</h2>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="checkout-column">
+      <h1>CART</h1>
+      <div id="cart-list">
+        <!-- <div class="cart-item">
+          <div class="cart-item-name">PEN</div>
+          <div class="cart-item-total-price">200</div>
+          <div class="quantity">
+            <button class="sub">-</button>
+            <div class="qty">1</div>
+            <button class="add">+</button>
+          </div>  
+        </div> -->
+      </div>
+      <div id="price-and-btns">
+        <div class="price-btn-wrap">
+          <h2 id="checkout-total-price">Total Price: $0</h2>
+          <button id="clear-cart-btn">CLEAR</button>
+        </div>
+        <div id="btns">
+          <button id="checkout-column-close-btn">CLOSE</button>
+          <button id="checkout-column-checkout-btn">CHECKOUT</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="checkout-preview-wrapper">
+      <div id="checkout-preview-container">
+        <div id="checkout-payment-details">
+          <h2 id="payment-main">Payment Details</h2>
+          <form action="#" id="checkout-payment-form">
+            <div id="card-type-container">
+              <h5>Payment Options</h5>
+              <div class="card-type">
+                <img src="images/visa.png" alt="VISA" /><input
+                  type="radio"
+                  name="method"
+                  id="visa"
+                />
+              </div>
+              <div class="card-type">
+                <img src="images/master.png" alt="MASTER" /><input
+                  type="radio"
+                  name="method"
+                  id="master"
+                />
+              </div>
+            </div>
+
+            <div id="card-number-wrapper">
+              <h5>Card Number</h5>
+              <input type="text" name="card-no" id="card-number" />
+            </div>
+
+            <div id="card-holder-name-wrapper">
+              <h5>Card Holder Name</h5>
+              <input
+                type="text"
+                name="card-holder-name"
+                id="card-holder-name"
+              />
+            </div>
+            <div id="card-expire-wrapper">
+              <h5>Card Expiry</h5>
+              <input type="month" name="card_expiry" id="card_expiry" />
+            </div>
+            <div id="card-ccv-wrapper">
+              <h5>CCV</h5>
+              <input type="text" name="ccv" id="ccv" />
+            </div>
+            <button id="checkout-payment-form-clear-btn">Clear Fields</button>
+          </form>
+        </div>
+
+        <div id="checkout-preview">
+          <div id="checkout-heading">
+            <h2>Oder Summary</h2>
+            <h3>Oder Details:</h3>
+          </div>
+          <div id="checkout-details">
+            <!-- <div class="checkout-item">
+              <div class="checkout-item-name">PEN</div>
+              <div class="checkout-item-qty">1</div>
+              <div class="checkout-item-total-price">200</div>
+            </div> -->
+          </div>
+          <div id="checkout-summary">
+            <h3>Total Items:</h3>
+            <h3 id="checkout-summary-items">Total Items:</h3>
+            <h3>Total Price:</h3>
+            <h3 id="checkout-summary-price">Total Price:</h3>
+          </div>
+          <div id="payment-btns">
+            <button id="back-btn">Back</button>
+            <button id="pay-btn">Place Oder</button>
+          </div>
+        </div>
+
+        <div id="checkout-billing-details">
+          <h2 id="shipping-main">Shipping Address</h2>
+          <form action="#" id="checkout-billing-details-form">
+            <div id="address-wrapper">
+              <h5>Address</h5>
+              <input type="text" name="address" id="address" />
+            </div>
+            <div id="town-wrapper">
+              <h5>Town/City</h5>
+              <input type="text" name="town" id="town" />
+            </div>
+            <div id="country-wrapper">
+              <h5>Country</h5>
+              <input type="text" name="country" id="country" />
+            </div>
+            <div id="postal-wrapper">
+              <h5>Postcode/Zip Code</h5>
+              <input type="text" name="zip-code" id="zip-code" />
+            </div>
+            <button id="checkout-billing-form-clear-btn">Clear Fields</button>
+          </form>
+        </div>
+
+        <div id="checkout-user-details">
+          <h2>Contact Details</h2>
+          <form action="#" id="checkout-user-details-form">
+            <div id="fname-wrapper">
+              <h5>First Name</h5>
+              <input type="text" name="f-name" id="f-name" />
+            </div>
+            <div id="surename-wrapper">
+              <h5>Surename</h5>
+              <input type="text" name="s-name" id="s-name" />
+            </div>
+            <div id="number-wrapper">
+              <h5>Phone Number</h5>
+              <input type="text" name="m-number" id="m-number" />
+            </div>
+            <div id="email-wrapper">
+              <h5>Email</h5>
+              <input type="text" name="email" id="email" />
+            </div>
+            <button id="checkout-user-form-clear-btn">Clear Fields</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <a href="/student1/pageEditor/pageEditor.html">
+        <div class="page-editor">
+          <h2>Page Editor</h2>
+          <div>
+            <p>Name: N. M. Yasaswi</p>
+            <p>Role: Student 1</p>
+            <p class="link">Click here</p>
+          </div>
+        </div>
+      </a>
+    </footer>
+    <script src="js/shop.js"></script>
+  </body>
+</html>

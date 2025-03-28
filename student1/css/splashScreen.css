@@ -1,0 +1,116 @@
+@import "../styles/styles/fonts.css";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: var(--font-navbar);
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+    background-color: rgba(31, 26, 26, 0.507);
+}
+
+#splash-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 10px 1fr;
+    width: 700px;
+    column-gap: 10px;
+    z-index: 100;
+    animation: fadeIn 3s ease-in-out forwards; 
+    opacity: 0;
+}
+
+#splash-wrapper.loaded {
+    opacity: 1; 
+}
+
+#logo {
+    width: 300px;
+}
+
+#mission-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding-top: 10px;
+    padding-left: 30px;
+    font-size: 23px;
+    color: #eee;
+}
+
+#mission {
+    text-align: justify;
+}
+
+#student-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 5px 1fr;
+    color: #eee;
+}
+
+.students {
+    text-align: center;
+}
+
+.student-line {
+    background-color: #eee;
+    width: 100%;
+    height: 100%;
+}
+
+#loading-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap:20px;
+}
+
+#loading-wrapper h1 {
+    color: #eee;
+    margin-top: 15px;
+}
+
+#loading {
+    width: 70px;
+    animation: rotate 2s linear infinite;
+}
+
+.line {
+    background-color: #eee;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

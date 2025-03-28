@@ -1,0 +1,35 @@
+@import "../styles/styles/fonts.css";
+@import "../styles/styles/color.css";
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-navbar);
+  background-color: var(--color-ligth-blue);
+}
+
+.page-editor {
+  background-color: var(--color-dark-blue);
+  color: var(--color-white);
+  padding: 10px;
+}
+
+.page-editor h2 {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.468);
+  margin: 10px;
+  border-radius: 15px;
+}
+.page-editor div {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.editor-details h3 {
+  margin: 15px;
+}
