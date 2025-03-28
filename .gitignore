@@ -1,0 +1,16 @@
+# Ignore VS Code editor settings
+.vscode/
+
+# Ignore system or temp files
+*.tmp
+*.log
+*.DS_Store
+Thumbs.db
+
+# Ignore document backups or temp files
+*.docx
+*~WRL*.tmp
+
+# Optional: Node.js or Python-related stuff (if you add backend later)
+node_modules/
+.env
